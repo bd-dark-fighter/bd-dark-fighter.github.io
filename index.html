@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BD Dark Fighter</title>
+<style>
+body{margin:0;background:#000;color:#0f0;font-family:monospace;overflow:hidden;text-align:center}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+.box{margin-top:12vh}
+img{width:150px;height:150px;border-radius:50%;border:3px solid #0f0;box-shadow:0 0 25px #0f0;object-fit:cover}
+h1{font-size:30px;text-shadow:0 0 15px #0f0}
+.card{border:1px solid #0f0;background:rgba(0,255,0,0.1);max-width:340px;margin:20px auto;padding:15px;border-radius:10px}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="box">
+<img src="https://avatars.githubusercontent.com/bd-dark-fighter">
+<h1>BD Dark Fighter</h1>
+<p>Ethical Hacker | Shariakandi</p>
+<div class="card">
+<p>☠️ Welcome to My Security Lab ☠️</p>
+<p>STATUS: ● ONLINE SECURED</p>
+<p style="font-size:11px">Phishing Detector: ACTIVE ✓</p>
+</div>
+</div>
+<script>
+let canvas=document.getElementById("c"),ctx=canvas.getContext("2d");
+canvas.width=innerWidth;canvas.height=innerHeight;
+let cols=canvas.width/14,drops=[];for(let i=0;i<cols;i++)drops[i]=1;
+function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#0f0";ctx.font="14px monospace";for(let i=0;i<drops.length;i++){ctx.fillText(Math.random()>0.5?"1":"0",i*14,drops[i]*14);if(drops[i]*14>canvas.height&&Math.random()>0.975)drops[i]=0;drops[i]++}}
+setInterval(draw,35);
+</script>
+</body>
+  </html>
