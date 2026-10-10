@@ -31,5 +31,9 @@ let cols=canvas.width/14,drops=[];for(let i=0;i<cols;i++)drops[i]=1;
 function draw(){ctx.fillStyle="rgba(0,0,0,0.05)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#0f0";ctx.font="14px monospace";for(let i=0;i<drops.length;i++){ctx.fillText(Math.random()>0.5?"1":"0",i*14,drops[i]*14);if(drops[i]*14>canvas.height&&Math.random()>0.975)drops[i]=0;drops[i]++}}
 setInterval(draw,35);
 </script>
+  <!-- Visitor Tracker -->
+<p style="color:#00ff00; text-align:center; font-family:monospace; position:relative; z-index:10;">
+  👁️ Total Visitors: <img src="https://visitor-badge.laobi.icu/badge?page_id=bd-dark-fighter.bd-dark-fighter.github.io" alt="visitors">
+</p>
 </body>
   </html>
